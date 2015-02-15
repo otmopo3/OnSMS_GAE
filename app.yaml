@@ -1,0 +1,33 @@
+application: otmopo3smssave
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /_ah/spi/.*
+  script: sms_api.APPLICATION 
+- url: /money.*
+  script: money.app
+- url: /json.*
+  script: smsjson.app
+- url: /.*
+  script: smssaver.app
+
+
+  
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: django
+  version: latest
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: 1.0  
+  
+builtins:
+- django_wsgi: on
+ 

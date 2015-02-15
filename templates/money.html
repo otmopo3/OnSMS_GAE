@@ -1,0 +1,16 @@
+<html>
+  <body>
+  	Transaction List:<br>
+    {% for transaction in money %}
+       {{ transaction.local_time }}
+       {{ transaction.activity }} 
+       {{ transaction.money }} 
+       {{ transaction.agent }}       
+      
+      <br>
+     
+    {% endfor %}
+
+
+  </body>
+</html>

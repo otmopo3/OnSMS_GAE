@@ -1,0 +1,22 @@
+indexes:
+- kind: SMS
+  properties:
+  - name: from_number
+  - name: date_received
+    direction: desc
+
+- kind: MoneyMovement
+  properties:
+  - name: activity
+  - name: result
+  - name: agent
+    direction: desc
+  - name: date_received
+    direction: desc    
+    
+- kind: MoneyMovement
+  properties:
+  - name: activity
+  - name: date_received
+    direction: desc    
+   

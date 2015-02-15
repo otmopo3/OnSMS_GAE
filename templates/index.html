@@ -1,0 +1,17 @@
+<html>
+  <body>
+  	SMS List:<br>
+    {% for sms in smss %}
+      
+        at {{ sms.date_received }} SMS from <b>{{ sms.from_number }}</b> 
+        <a href=https://maps.google.ru/maps?q={{ sms.loc_lat }},{{ sms.loc_long }}&z=13>map</a>:
+      
+      
+      <blockquote>{{ sms.sms_text }}</blockquote>
+      <br>
+     
+    {% endfor %}
+
+
+  </body>
+</html>
